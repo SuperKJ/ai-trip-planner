@@ -3,7 +3,19 @@ pandas
 matplotlib
 scikit-learn
 langchain
-langchain-groq
+langchain-community
+langchain-experimental
+langchain_groq
 langgraph
 fastapi
 streamlit
+python-dotenv
+uvicorn
+pydantic
+httpx
+requests
+langchain_google_community
+langchain_tavily
+langchain_openai
+
+-e .

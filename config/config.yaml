@@ -1,0 +1,7 @@
+llm:
+  openai:
+    provider: "openai"
+    model_name: "gpt-4-turbo"
+  groq:
+    provider: "groq"
+    model_name: "groq-llama2-70b-chat"
