@@ -16,7 +16,9 @@ def multiply(a: int, b: int) -> int:
     Returns:
         int: The product of a and b.
     """
-    return a * b
+    a = float(a) if isinstance(a, (int, float, str)) else a.get('value', a)
+    b = float(b) if isinstance(b, (int, float, str)) else b.get('value', b)
+    return int(a * b)
 
 @tool
 def add(a: int, b: int) -> int:
@@ -30,7 +32,9 @@ def add(a: int, b: int) -> int:
     Returns:
         int: The sum of a and b.
     """
-    return a + b
+    a = float(a) if isinstance(a, (int, float, str)) else a.get('value', a)
+    b = float(b) if isinstance(b, (int, float, str)) else b.get('value', b)
+    return int(a + b)
 
 @tool
 def currency_converter(from_curr: str, to_curr: str, value: float)->float:

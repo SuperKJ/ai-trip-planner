@@ -24,7 +24,17 @@ class Calculator:
         Returns:
             float: The sum of numbers in the list x
         """
-        return sum(x)
+        total = 0
+        for item in x:
+            if isinstance(item, dict):
+                total += float(item.get('value', item.get('amount', 0)))
+            elif isinstance(item, (int, float)):
+                total += float(item)
+            elif isinstance(item, str):
+                total += float(item)
+            else:
+                total += 0
+        return total
     
     @staticmethod
     def calculate_daily_budget(total: float, days: int) -> float:
