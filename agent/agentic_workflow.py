@@ -26,7 +26,7 @@ class GraphBuilder():
             self.currency_conversion_tools.currency_converter_tool_list
         ])
 
-        self.llm_with_with_tools = self.llm.bind_tools(tools = self.tools)
+        self.llm_with_tools = self.llm.bind_tools(tools = self.tools)
 
         self.graph = None
 
