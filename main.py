@@ -24,7 +24,7 @@ async def query_travel_agent(query: QueryRequest):
 
         print(f"Graph PNG saved as 'my_graph.png' in  {os.getcwd()}")
 
-        messages = {'messages': [query.question]}
+        messages = {'messages': [query.query]}
         output = react_app.invoke(messages)
 
         if isinstance(output, dict) and 'messages' in output:

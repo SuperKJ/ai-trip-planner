@@ -31,7 +31,7 @@ if submit_button and user_input.strip():
     try:
 
         with st.spinner("Planning your trip..."):
-            payload = {"question": user_input}
+            payload = {"query": user_input}
             response = requests.post(f"{BASE_URL}/query", json=payload)
 
         if response.status_code == 200:

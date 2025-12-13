@@ -1,4 +1,8 @@
+import os 
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class WeatherForecastTool:
     def __init__(self, api_key:str):

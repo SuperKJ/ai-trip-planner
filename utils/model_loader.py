@@ -6,6 +6,8 @@ from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
 from utils.config_loader import load_config
 
+load_dotenv()
+
 
 
 class ConfigLoader:
@@ -18,7 +20,7 @@ class ConfigLoader:
 
 
 
-class ModelLoader(BaseNode):
+class ModelLoader(BaseModel):
     model_provider: Literal["openai",'groq'] = "groq"
     config: Optional[ConfigLoader] = Field(default=None, exclude =True)
 
@@ -32,7 +34,7 @@ class ModelLoader(BaseNode):
         """Loads and returns the model based on the provider specified."""
         print("LLM Loading...")
         print(f"Loading model from provider: {self.model_provider}")
-        if self.model.provider == "groq":
+        if self.model_provider == "groq":
             print("GROQ Model chosen")
             groq_api_key = os.getenv("GROQ_API_KEY")
             model_name = self.config['llm']['groq']['model_name']

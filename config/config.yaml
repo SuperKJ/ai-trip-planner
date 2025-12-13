@@ -4,4 +4,4 @@ llm:
     model_name: "gpt-4-turbo"
   groq:
     provider: "groq"
-    model_name: "groq-llama2-70b-chat"
+    model_name: "openai/gpt-oss-120b"
